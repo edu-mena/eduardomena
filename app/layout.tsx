@@ -13,8 +13,30 @@ const pressStart = Press_Start_2P({
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Eduardo Mena - DevOps Engineer",
-  description: "",
+  title: 'Eduardo Mena | Engenheiro DevOps & Full-Stack',
+  description: 'Portfólio profissional de Eduardo Mena. Engenheiro DevOps focado em criar estruturas sólidas, escaláveis e aplicações web/móveis.',
+  openGraph: {
+    title: 'Eduardo Mena | Engenheiro DevOps & Full-Stack',
+    description: 'Portfólio profissional de Eduardo Mena.',
+    url: 'https://eduardomena.vercel.app/',
+    siteName: 'Eduardo Mena Portefólio',
+    images: [
+      {
+        url: '/banner/banner.png',
+        width: 1200,
+        height: 630,
+        alt: 'Eduardo Mena - Engenheiro DevOps & Full-Stack',
+      },
+    ],
+    locale: 'pt_PT',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Eduardo Mena | Engenheiro DevOps & Full-Stack',
+    description: 'Portfólio profissional de Eduardo Mena.',
+    images: ['/banner/banner.png'],
+  },
 };
 
 export default function RootLayout({

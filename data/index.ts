@@ -77,7 +77,7 @@ export const projects = [
     title: "YMR Industrial",
     des: "Explore as diversas soluções oferecidas pela YMR para os diversos setores do mercado indutrial angolano.",
     img: ["/projects/ymrindustrial/1.png", "/projects/ymrindustrial/2.png", "/projects/ymrindustrial/3.png"],
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/next.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/php.svg", "/mysql.svg"],
     link: "https://ymrindustrial.com/",
     date: "2024",
   },
@@ -86,7 +86,7 @@ export const projects = [
     title: "Lourenço Tomás",
     des: "Portfólio do angolano especialista em aerografia Lourenço Tomás com mais de 30 anos de experiência.",
     img: ["/projects/aovc/1.png", "/projects/aovc/2.png", "/projects/aovc/3.png"],
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/js.svg", "/php.svg", "/mysql.svg"],
     link: "https://aovc.ao/",
     date: "2026",
   },
@@ -95,7 +95,7 @@ export const projects = [
     title: "CINEMAX",
     des: "Plataforma de venda de bilhetes online para a rede de cinemas Cinemax.",
     img: ["/projects/cinemax/1.png", "/projects/cinemax/3.png", "/projects/cinemax/4.png"],
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
     link: "https://cinemax-web-mu.vercel.app/",
     date: "2026",
   },
@@ -104,7 +104,7 @@ export const projects = [
     title: "Rede Girassol",
     des: "Website Institucional para a rede de comunição, televisão e rádio angolana Girassol. Proposta apresentada à aguradar aprovação",
     img: ["/projects/redegirassol/1.png", "/projects/redegirassol/3.png", "/projects/redegirassol/3.png"],
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/supabase.svg", "/gsap.svg"],
     link: "https://redegirassol-web.vercel.app/",
     date: "2025",
   },
@@ -118,7 +118,6 @@ export const projects = [
     date: "2026",
   },
 ];
-
 export const testimonials = [
   {
     quote:

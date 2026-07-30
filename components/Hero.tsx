@@ -8,7 +8,7 @@ import { MultiPhraseTypewriter } from "./ui/MultiPhraseTypewriter";
 
 const Hero = () => {
   return (
-    <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen w-screen flex flex-col items-center justify-center">
+    <div className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] min-h-screen w-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Imagem de fundo */}
       <Image
         src="/images/hero-bg.png"
@@ -27,13 +27,13 @@ const Hero = () => {
 
       {/* Conteúdo */}
       <div className="relative z-10 flex flex-col items-center justify-center px-6 pt-20">
-        {/* Typewriter - z-0 para ficar atrás da imagem */}
-        <div className="relative z-0 -mb-5">
+        {/* Typewriter */}
+        <div className="relative z-0 -mb-2 sm:-mb-3">
           <MultiPhraseTypewriter
             phrases={[
               "Olá, Humano!",
               "Daqui Eduardo Mena",
-              "Bem-vindo ao meu Portfólio",
+              "Este é o meu Portfólio",
               "Explore muito :)"
             ]}
             className="font-mono text-[#00FF00] text-sm md:text-lg lg:text-xl text-center leading-tight h-[1.25em]"
@@ -43,8 +43,8 @@ const Hero = () => {
           />
         </div>
 
-        {/* Imagem de Perfil - z-10 para ficar acima do typewriter mas atrás do botão */}
-        <div className="relative z-10 w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 -mb-16">
+        {/* Imagem de Perfil - Aumentada substancialmente em mobile (w-72 h-72) e ajustada a sobreposição */}
+        <div className="relative z-10 w-72 h-72 sm:w-80 sm:h-80 md:w-80 md:h-80 -mb-16 sm:-mb-24">
           <Image
             src="/hero/hero.png"
             alt="Perfil"
@@ -55,7 +55,7 @@ const Hero = () => {
         </div>
 
         {/* Botão - z-20 para sobrepor a parte inferior da imagem */}
-        <div className="relative z-20 pt-6">
+        <div className="relative z-20 pt-1 mt-12 w-64">
           <MagicButton
             title="Ver Portfólio"
             icon={<FaLocationArrow />}
