@@ -1,0 +1,277 @@
+/* === SUBTITLE - Automatic Text Stroke + Fill Animation === */
+@keyframes fillText {
+    0% {
+        width: 0%;
+        filter: drop-shadow(0 0 0px rgba(34, 197, 94, 0));
+    }
+
+    50% {
+        width: 100%;
+        filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.8));
+    }
+
+    100% {
+        width: 100%;
+        filter: drop-shadow(0 0 20px rgba(34, 197, 94, 0.8));
+    }
+}
+
+.subtitle {
+    font-family: "Courier New", monospace;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(156, 163, 175, 1);
+    position: relative;
+    display: inline-block;
+}
+
+.subtitle::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    color: #22c55e;
+    -webkit-text-stroke: 1px #22c55e;
+    width: 0%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #22c55e;
+    animation: fillText 2s ease-out 0s infinite;
+}
+
+/* === TITLE - Pixel/Retro Style === */
+.pixelTitle {
+    font-family: "Press Start 2P", "Arial Black", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    background: linear-gradient(45deg, #fff, #e5e7eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(3px 3px 0px rgba(34, 197, 94, 0.3));
+}
+
+/* === DESCRIPTION - Terminal Green === */
+.description {
+    font-family: "Courier New", monospace;
+    color: #22c55e;
+    letter-spacing: 1px;
+}
+
+/* === PRIMARY BUTTON - Fancy White Style === */
+.primaryButton {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.125em 1.75em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 12px;
+    font-family: "Courier New", monospace;
+}
+
+.primaryButton::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: #ffffff;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.primaryButton .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.primaryButton .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.primaryButton .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.primaryButton .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.4);
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.primaryButton:hover {
+    color: #000;
+    background: #ffffff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.primaryButton:hover::before {
+    width: 0.9375rem;
+    background: #000;
+}
+
+.primaryButton:hover .text {
+    color: #000;
+    padding-left: 1.5em;
+}
+
+.primaryButton:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.primaryButton:hover .bottom-key-1,
+.primaryButton:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+/* === SECONDARY BUTTON - Subtle White Style === */
+.secondaryButton {
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.125em 1.75em;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 12px;
+    font-family: "Courier New", monospace;
+}
+
+.secondaryButton::before {
+    content: " ";
+    width: 1.3rem;
+    height: 1.5px;
+    background: #ffffff;
+    top: 50%;
+    left: 1.25em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: background 0.3s linear, width 0.3s linear;
+}
+
+.secondaryButton .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.secondaryButton .top-key {
+    height: 1.5px;
+    width: 1.3rem;
+    top: -1.5px;
+    left: 0.5rem;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.secondaryButton .bottom-key-1 {
+    height: 1.5px;
+    width: 1.3rem;
+    right: 1.625rem;
+    bottom: -1.5px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.secondaryButton .bottom-key-2 {
+    height: 1.5px;
+    width: 0.5rem;
+    right: 0.5rem;
+    bottom: -1.5px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.secondaryButton:hover {
+    color: #000;
+    background: #ffffff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    border-color: #ffffff;
+}
+
+.secondaryButton:hover::before {
+    width: 0.8rem;
+    background: #000;
+}
+
+.secondaryButton:hover .text {
+    color: #000;
+    padding-left: 1.5em;
+}
+
+.secondaryButton:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.secondaryButton:hover .bottom-key-1,
+.secondaryButton:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}

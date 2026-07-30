@@ -1,0 +1,184 @@
+.title {
+    font-family: "Courier New", monospace;
+    background: linear-gradient(to right, #4ade80, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.pixelTitle {
+    font-family: "Press Start 2P", "Arial Black", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1.2;
+    background: linear-gradient(45deg, #fff, #e5e7eb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(3px 3px 0px rgba(34, 197, 94, 0.3));
+}
+
+/* Desktop Horizontal Timeline */
+.scrollContainer {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(74, 222, 128, 0.3) rgba(0, 0, 0, 0.1);
+}
+
+.scrollContainer::-webkit-scrollbar {
+    height: 6px;
+}
+
+.scrollContainer::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb {
+    background: rgba(74, 222, 128, 0.3);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.scrollContainer::-webkit-scrollbar-thumb:hover {
+    background: rgba(74, 222, 128, 0.6);
+}
+
+.timelineItemHorizontal {
+    animation: fadeInScale 0.6s ease-out backwards;
+}
+
+.timelineItemHorizontal:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.timelineItemHorizontal:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.timelineItemHorizontal:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.timelineItemHorizontal:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.timelineItemHorizontal:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.timelineItemHorizontal:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Mobile Vertical Timeline */
+.timelineItemVertical {
+    animation: slideInLeft 0.6s ease-out backwards;
+}
+
+.timelineItemVertical:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.timelineItemVertical:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.timelineItemVertical:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.timelineItemVertical:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.timelineItemVertical:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.timelineItemVertical:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Card Styles */
+.card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(74, 222, 128, 0.1), transparent);
+    transition: left 0.5s ease;
+    pointer-events: none;
+}
+
+.card:hover::before {
+    left: 100%;
+}
+
+.card:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Dot Styles */
+.dot {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(74, 222, 128, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.875rem;
+    }
+
+    .card {
+        padding: 1rem;
+    }
+}
