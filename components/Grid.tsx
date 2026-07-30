@@ -4,11 +4,6 @@ import { gridItems } from "@/data";
 import dynamic from "next/dynamic";
 import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
 
-const GridGlobe = dynamic(() => import("./ui/GridGlobe"), {
-  ssr: false,
-  loading: () => <div className="w-full h-full bg-gray-900" />,
-});
-
 const Grid = () => {
   return (
     <section id="diversos">
