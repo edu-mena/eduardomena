@@ -4,12 +4,6 @@ import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import dynamic from "next/dynamic";
 
-// ← ADICIONE ESTA LINHA
-const GridGlobe = dynamic(() => import("./GridGlobe"), {
-  ssr: false,
-  loading: () => <div className="w-full h-full bg-gray-900" />,
-});
-
 const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import { cn } from "@/lib/utils";
 
@@ -142,9 +136,6 @@ export const BentoGridItem = ({
                 {title}
               </div>
             )}
-
-            {/* 3D Globe for id 2 */}
-            {id === 2 && <GridGlobe />}
 
             {/* Tech stack for id 3 - Fixed positioning */}
             {id === 3 && (

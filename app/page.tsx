@@ -2,6 +2,7 @@
 
 import { navItems } from "@/data";
 
+import dynamic from "next/dynamic";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Hero from "@/components/Hero";
 import FeatureSection from "@/components/FeatureSection";
@@ -11,6 +12,11 @@ import TechStack from "@/components/Techstack";
 import Grid from "@/components/Grid";
 import About from "@/components/about";
 import Footer from "@/components/Footer";
+
+const Approach = dynamic(() => import("@/components/Approach"), {
+  ssr: false,
+  loading: () => <div className="w-full py-20" />,
+});
 
 
 const Home = () => {
@@ -27,6 +33,7 @@ const Home = () => {
         <RecentProjects />
         <TechStack />
         <ExperienceTimeline />
+        <Approach />
         <Grid />
         <About
           subtitle="Quem Sou?" 
