@@ -3,7 +3,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "./modules/RecentProjects.module.css";
-import { CanvasRevealEffect } from "./ui/CanvasRevealEffect";
 
 const Approach = () => {
   return (
@@ -17,50 +16,19 @@ const Approach = () => {
           icon={<AceternityIcon order="Primeira Fase" />}
           des="Colaborar com o gestor de Produto e de Projectos para decidir o melhor caminho para o destino em que se pretende chegar, definindo o escopo e o levantando os requisitos para poder se criar uma proposta de desenvolvimento com o cronograma especificado"
         >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-[#000702] overflow-hidden"
-            colors={[
-              [31, 138, 28],
-              [99, 138, 28],
-            ]}
-            dotSize={1}
-          />
         </Card>
         <Card
           title="Desenvolvimento e Atualizações de Progresso"
           icon={<AceternityIcon order="Sefunda Fase" />}
           des="Iniciar o desenvovimento e executar o plano definido na proposta de desenvolvimento fornecendo atualizações periódicas aos gestor de projecto e de produto."
         >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-[#000702] overflow-hidden"
-            colors={[
-              [31, 138, 28],
-              [99, 138, 28],
-            ]}
-            dotSize={1}
-          />
-          {/* Radial gradient for the cute fade */}
-          {/* remove this one */}
-          {/* <div className="absolute inset-0 [mask-image:radial-gradient(400px_at_center,white,transparent)] bg-black/50 dark:bg-black/90" /> */}
+          
         </Card>
         <Card
           title="Entrega do Resultado «"
           icon={<AceternityIcon order="Terceira Fase" />}
           des="Concluir o desenvolvimento do projecto realizar a apresentação dos resultados obtidos em uma reunião com todas as partes competentes e reavaliar os requisitos para que se tenha certeza de que o que foi proposto antes do desenvolvimento é o que será entregue em produção."
         >
-          <CanvasRevealEffect
-            animationSpeed={3}
-            containerClassName="bg-[#000702] overflow-hidden"
-            colors={[
-              [0, 138, 28],
-              [0, 138, 28],
-              [31, 138, 28],
-              [99, 138, 28],
-            ]}
-            dotSize={1}
-          />
         </Card>
       </div>
     </section>
