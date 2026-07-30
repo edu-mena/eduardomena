@@ -210,7 +210,7 @@ const TechStack = () => {
             <div className="w-8 h-1 bg-green-400 mb-4 rounded-full"></div>
             
             <p className="text-gray-300 text-sm leading-relaxed">
-              "{selectedTool.description}"
+              {selectedTool.description}
             </p>
           </div>
         </div>
