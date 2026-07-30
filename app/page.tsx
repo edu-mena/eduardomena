@@ -2,18 +2,21 @@
 
 import { navItems } from "@/data";
 
+import dynamic from "next/dynamic";
+import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import Hero from "@/components/Hero";
 import FeatureSection from "@/components/FeatureSection";
-import Grid from "@/components/Grid";
-import Footer from "@/components/Footer";
-import Clients from "@/components/Clients";
-import Approach from "@/components/Approach";
-import Experience from "@/components/Experience";
 import RecentProjects from "@/components/RecentProjects";
-import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import ExperienceTimeline from "@/components/Experiencetimeline";
 import TechStack from "@/components/Techstack";
+import Grid from "@/components/Grid";
 import About from "@/components/about";
+import Footer from "@/components/Footer";
+
+const Approach = dynamic(() => import("@/components/Approach"), {
+  ssr: false,
+  loading: () => <div className="w-full py-20" />,
+});
 
 const Home = () => {
   return (

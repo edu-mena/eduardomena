@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import { useEffect, useRef, useState } from "react";
 import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
@@ -303,3 +304,5 @@ export function genRandomNumbers(min: number, max: number, count: number) {
 
   return arr;
 }
+
+

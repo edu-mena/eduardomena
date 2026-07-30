@@ -1,3 +1,5 @@
+"use client";
+
 import { FaLocationArrow, FaWhatsapp, FaPhone } from "react-icons/fa6";
 
 import { socialMedia } from "@/data";

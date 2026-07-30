@@ -1,12 +1,16 @@
 "use client";
+
 import React from "react";
 import { motion } from "framer-motion";
+
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("./Globe").then((m) => m.World), {
   ssr: false,
+  loading: () => <div className="w-full h-full bg-gray-900" />,
 });
 
+// ... resto do código
 const GridGlobe = () => {
   const globeConfig = {
     pointSize: 4,
